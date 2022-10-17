@@ -1,6 +1,6 @@
-# lib-custom-react-component
+# common-react
 A library of React components created using `create-react-app`.
 
 ## Installation
 Run the following command:
-`npm install lib-custom-react-component`
+`npm install common-react`
