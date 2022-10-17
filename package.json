@@ -1,12 +1,12 @@
 {
-  "name": "lib-custom-react-component",
+  "name": "common-react",
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [ "dist", "README.md" ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/apptest812/lib-custom-react-component.git"
+    "url": "https://github.com/apptest812/common-react.git"
   },
   "dependencies": {
   },
