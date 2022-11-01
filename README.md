@@ -11,7 +11,7 @@ Run the following command:
 2. `npm install`
 3. Do changes in Packages
 4. `npm run build`
-5. `npx jsconfig.json -b dist`
+5. `npx jsconfig.json -b dist` and remove dist from exclude in jsconfig.json
 6. `git add .`
 7. `git commit -m "Commit Message"`
 8. `git push origin main`
