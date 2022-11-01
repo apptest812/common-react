@@ -5,7 +5,12 @@ const TextInput = (props) => {
   const { type = "text", label, value, onChange, style = {}, labelStyle = {} } = props;
   const [onValue, setOnValue] = useState("");
   // eslint-disable-next-line
-  const [internalValue, setInternalValue] = useState(value ? internalValue : "");
+  const [internalValue, setInternalValue] = useState("");
+  
+  useEffect(() => {
+    setInternalValue(value);
+  }, [value]);
+
   useEffect(() => {
     if (internalValue) {
       setOnValue("filled");
