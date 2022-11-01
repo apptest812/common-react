@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TextInput.css";
 
 const TextInput = (props) => {
-  const { type = "text", label, value, onChange, style = {}, labelStyle={} } = props;
+  const { type = "text", label, value, onChange, style = {}, labelStyle = {} } = props;
+  const [onValue, setOnValue] = useState("");
+  // eslint-disable-next-line
+  const [internalValue, setInternalValue] = useState(value ? internalValue : "");
+  useEffect(() => {
+    if (internalValue) {
+      setOnValue("filled");
+    } else {
+      setOnValue("");
+    }
+  }, [internalValue])
 
   const { width, height } = style;
   let divStyle = {};
@@ -24,10 +34,10 @@ const TextInput = (props) => {
         type={type}
         className="text-input"
         value={value}
-        onChange={e => onChange && onChange(e.target.value)}
+        onChange={e => !onChange ? setInternalValue(e.target.value) : onChange(e)}
         style={style}
       />
-      <label className={value && 'filled'} style={{ fontSize: fontSize, ...labelStyle }} >
+      <label className={onValue} style={{ fontSize: fontSize, ...labelStyle }} >
         {label}
       </label>
     </div>

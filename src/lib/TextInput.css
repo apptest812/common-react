@@ -1,13 +1,15 @@
 .input-container {
   position: relative;
-  width: 100%; 
+  width: 100%;
 }
-.input-container input{
+
+.input-container input {
   width: 100%;
   padding: 5px;
   font-size: 20px;
   border-radius: 6px;
 }
+
 .input-container label {
   position: absolute;
   top: 0;
@@ -21,10 +23,10 @@
   left: 16px;
 }
 
-.input-container:focus-within label {
-  transform: translate(0, -5px) scale(0.6);
-  color: #0a53e4;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: white;
+.input-container:focus-within label,
+.filled {
+  transform: translate(0, -5px) scale(0.6) !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  background-color: white !important;
 }
